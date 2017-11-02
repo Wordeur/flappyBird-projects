@@ -1,0 +1,21 @@
+    <div class="container" ng-init="loadPlayerData()">
+        <h3 class="text-left">Classement</h3>
+        <br>
+        
+        <table style="margin: 0 auto" class="table table-hover pull-center">
+            <thead>
+              <tr>
+                <th>#Rank</th>
+                <th>Pseudo</th>
+                <th>Point</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="$index" ng-repeat="player in dataPlayers">
+                <td>{{ $index + 1 }}</td>
+                <td>{{ player.name }}</td>
+                <td>{{ player.score }}</td>
+              </tr>
+            </tbody>
+      </table>
+    </div>
